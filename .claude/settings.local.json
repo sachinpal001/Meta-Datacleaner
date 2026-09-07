@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --headless=new --disable-gpu --allow-file-access-from-files --virtual-time-budget=8000 --dump-dom \"$env:TEMP\\\\mc-orient-test2.html\" 2>$null | Select-String -Pattern 'test JPEG|^A\\\\\\)|^B\\\\\\)|^C\\\\\\)|^D\\\\\\)|^E\\\\\\)|CHROME AUTO|VERDICT|app.js is|correct output|C = what|ERROR')"
+    ]
+  }
+}

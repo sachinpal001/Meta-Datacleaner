@@ -1,0 +1,128 @@
+{
+  "name": "MetaClean — Instant Photo Privacy",
+  "short_name": "MetaClean",
+  "description": "Strip metadata from photos instantly. Protect your privacy before sharing.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#f8fafc",
+  "theme_color": "#f8fafc",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "photography",
+    "utilities",
+    "security"
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "handle_links": "auto",
+  "shortcuts": [
+    {
+      "name": "Open Camera",
+      "short_name": "Camera",
+      "description": "Capture a photo and strip its metadata",
+      "url": "./?action=camera",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Choose Photos",
+      "short_name": "Photos",
+      "description": "Pick photos from disk to clean",
+      "url": "./?action=open",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "name": "Image",
+      "accept": {
+        "image/jpeg": [
+          ".jpg",
+          ".jpeg",
+          ".jfif"
+        ],
+        "image/png": [
+          ".png"
+        ],
+        "image/webp": [
+          ".webp"
+        ],
+        "image/gif": [
+          ".gif"
+        ],
+        "image/bmp": [
+          ".bmp"
+        ]
+      },
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ],
+      "launch_type": "single-client"
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "photos",
+          "accept": [
+            "image/*"
+          ]
+        }
+      ]
+    }
+  }
+}
